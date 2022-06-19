@@ -1,0 +1,55 @@
+-- whitelist
+local keys = {
+    "MUXuTYWzItlV2xeN",
+    "TqKLuEMgp3CFePOZ",
+    "FreeKeyForBBaw",
+    "oJwbmt7QxPe8DN5K",
+    "8C5bkiHaWmrFVSq4",
+    "OL9wuAdKIaRsF41W",
+    "f8GFAt6jUWasewIh",
+    "jowUfYZB3DPzeSNv",
+    "UslqhkvjELYHxcRM",
+    "xJ3Tpqv7Rzlt9cFD",
+    "RrHSjbhZm9e7yLzc",
+    "fhqcVeGPRapCEmAW",
+    "xU9fpKs027XLYHrO",
+    "mbSGeL5PzAIFh792",
+    "0yrCEzOot61mfTPn",
+    "B34ST-K53Y-70R-S9UP"
+    "Lsg2t13fj93jxxz"
+}
+ 
+local counter = 1
+local keyCheck
+for i,v in pairs(keys) do
+    if counter == #keys then
+    -- No Whitelist
+    keys = ""
+    game.Players.LocalPlayer:Kick("Key Not Found")
+    else
+        if v == _G.Key then
+            -- whitelist-
+        elseif game:HttpGet(check) == _G.Keys then
+            game.StarterGui:SetCore("SendNotification", {
+                Title = 'Deility Hub';
+                Text = "Whitelist";
+                Icon = '';
+                Duration = 10;
+            })
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xDeilityHub/Comkak/main/Kaitan"))()
+            keyCheck = _G.Key
+            keys = ""
+        else
+            counter = counter +1
+        end
+    end
+end
+
+while true do
+    if _G.Key == keyCheck then
+        -- Wrong Keys
+    else
+        game.Players.LocalPlayer:Kick("Wrong Key")
+    end
+    wait()
+end
