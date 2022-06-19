@@ -29,7 +29,7 @@ for i,v in pairs(keys) do
     else
         if v == _G.Key then
             -- whitelist-
-        elseif game:HttpGet(check) == _G.Keys then
+        elseif game:HttpGet(check) == _G.Key then
             game.StarterGui:SetCore("SendNotification", {
                 Title = 'Deility Hub';
                 Text = "Whitelist";
